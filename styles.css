@@ -53,13 +53,33 @@ body::before {
   position: relative;
   overflow: hidden;
   margin-bottom: 28px;
-  padding: 34px 32px;
-  border: 1px solid var(--border);
+  padding: 60px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(135deg, rgba(255, 253, 248, 0.96), rgba(247, 237, 221, 0.88)),
-    var(--surface);
+    linear-gradient(rgba(45, 29, 13, 0.72), rgba(45, 29, 13, 0.45)),
+    url("images/Family_photo.jpeg");
+  background-size: cover;
+  background-position: center 30%;
   box-shadow: var(--shadow);
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero .eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.hero-copy {
+  max-width: 56ch;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .hero::after {
