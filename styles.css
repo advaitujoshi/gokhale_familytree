@@ -53,14 +53,18 @@ body::before {
   position: relative;
   overflow: hidden;
   margin-bottom: 28px;
-  padding: 60px 32px;
+  padding: 150px 32px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-lg);
   background:
     linear-gradient(rgba(45, 29, 13, 0.72), rgba(45, 29, 13, 0.45)),
     url("images/Family_photo.jpeg");
   background-size: cover;
-  background-position: center 30%;
+  background-position: center;
   box-shadow: var(--shadow);
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
