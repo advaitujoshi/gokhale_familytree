@@ -2269,37 +2269,37 @@ window.familyTreeData = {
     {
       "id": "arvind-r-deodhar",
       "name": "Arvind R Deodhar",
-      "photo": "images/arvind-r-deodhar.jpg",
+      "photo": "images/arvind-r-deodhar.JPG",
       "notes": ""
     },
     {
       "id": "sunita-a-deodhar",
       "name": "Sunita A Deodhar",
-      "photo": "images/sunita-a-deodhar.jpg",
+      "photo": "images/sunita-a-deodhar.JPG",
       "notes": ""
     },
     {
       "id": "avdhut-a-deodhar",
       "name": "Avdhut A Deodhar",
-      "photo": "images/avdhut-a-deodhar.jpg",
+      "photo": "images/avdhut-a-deodhar.JPG",
       "notes": ""
     },
     {
       "id": "anagha-a-deodhar",
       "name": "Anagha A Deodhar",
-      "photo": "images/anagha-a-deodhar.jpg",
+      "photo": "images/anagha-a-deodhar.JPG",
       "notes": ""
     },
     {
       "id": "ashwini-a-deodhar",
       "name": "Ashwini A Deodhar",
-      "photo": "images/ashwini-a-deodhar.jpg",
+      "photo": "images/ashwini-a-deodhar.JPG",
       "notes": ""
     },
     {
       "id": "avanti-a-deodhar",
       "name": "Avanti A Deodhar",
-      "photo": "images/avanti-a-deodhar.jpg",
+      "photo": "images/avanti-a-deodhar.JPG",
       "notes": ""
     },
     {
