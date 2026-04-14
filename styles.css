@@ -381,44 +381,52 @@ body::before {
   visibility: hidden;
 }
 
-.member-thumb,
+.member-mini-photo,
 .detail-photo {
   display: block;
   object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 8px 18px rgba(75, 56, 32, 0.16);
-}
-
-.member-thumb-stack {
-  position: relative;
-  width: 50px;
-  min-width: 50px;
-  height: 46px;
-}
-
-.member-thumb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-}
-
-.member-thumb.is-secondary {
-  left: 14px;
-  top: 6px;
-  width: 34px;
-  height: 34px;
   border-radius: 12px;
+  border: 1px solid rgba(157, 92, 47, 0.2);
+  box-shadow: 0 4px 10px rgba(109, 56, 24, 0.08);
+}
+
+.member-mini-photo {
+  width: 42px;
+  height: 42px;
+}
+
+.detail-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  border-width: 2px;
 }
 
 .member-name {
-  display: inline-flex;
-  justify-content: flex-start;
-  font: inherit;
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
   cursor: pointer;
   text-align: left;
+}
+
+.member-button-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px;
+  border-radius: 14px;
+  transition: background 180ms ease;
+}
+
+.member-name:hover .member-button-content {
+  background: rgba(157, 92, 47, 0.05);
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .member-people {

@@ -266,31 +266,23 @@ function getBranchMeta(unit) {
   return `${unit.children.length} child ${unit.children.length === 1 ? "branch" : "branches"}`;
 }
 
-function createThumbStack(unit) {
-  const thumbStack = document.createElement("div");
-  thumbStack.className = "member-thumb-stack";
-
-  unit.members.slice(0, 2).forEach((member, index) => {
-    const img = createMemberImage(
-      member,
-      `member-thumb ${index === 1 ? "is-secondary" : ""}`.trim()
-    );
-    thumbStack.appendChild(img);
-  });
-
-  return thumbStack;
-}
-
 function createMemberButton(member) {
   const button = document.createElement("button");
   button.className = `member-name ${member.id === selectedMemberId ? "is-active" : ""}`;
   button.type = "button";
+  
+  const photo = createMemberImage(member, "member-mini-photo");
+  
   button.innerHTML = `
-    <span>
-      <span class="member-full-name">${member.name}</span>
-      <span class="member-branch">${member.code || "Family member"}</span>
-    </span>
+    <div class="member-button-content">
+      <div class="member-photo-wrapper"></div>
+      <div class="member-info">
+        <span class="member-full-name">${member.name}</span>
+        <span class="member-branch">${member.code || "Family member"}</span>
+      </div>
+    </div>
   `;
+  button.querySelector(".member-photo-wrapper").appendChild(photo);
   button.addEventListener("click", () => openMemberModal(member.id));
   return button;
 }
@@ -482,7 +474,6 @@ function createTreeCard(unit) {
   });
 
   card.appendChild(toggleButton);
-  card.appendChild(createThumbStack(unit));
   card.appendChild(people);
   return card;
 }
