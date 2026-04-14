@@ -128,7 +128,6 @@ body::before {
 }
 
 .hero h1,
-.section-heading h2,
 .details-card h2 {
   margin: 0;
   font-family: "Playfair Display", serif;
@@ -166,15 +165,8 @@ body::before {
   padding: 24px;
 }
 
-.section-heading {
-  margin-bottom: 20px;
-}
 
-.section-heading h2 {
-  font-size: 1.6rem;
-}
 
-.section-heading p,
 .details-empty p,
 .member-branch,
 .member-meta,
@@ -184,7 +176,6 @@ body::before {
   color: var(--text-soft);
 }
 
-.section-heading p,
 .details-empty p,
 .search-status,
 .detail-bio {
