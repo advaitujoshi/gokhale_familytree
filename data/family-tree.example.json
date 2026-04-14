@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "title": "Gokhale Family Tree",
+    "source": "Hand-maintained JSON example",
+    "photoDirectory": "images/",
+    "defaultRootFamilyId": "fam-vireshwar-root"
+  },
+  "people": [
+    {
+      "id": "vireshwar-gokhale",
+      "name": "Vireshwar Gokhale",
+      "photo": "images/vireshwar-gokhale.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "radhabai-govind-deodhar",
+      "name": "Radhabai Govind Deodhar",
+      "photo": "images/radhabai-govind-deodhar.jpg",
+      "legacyCode": "A.2",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "govind-mahadev-deodhar",
+      "name": "Govind Mahadev Deodhar",
+      "photo": "images/govind-mahadev-deodhar.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "sonutai-vitthal-gokhale",
+      "name": "Late Sonutai (Uma) Vitthal Gokhale",
+      "photo": "images/sonutai-vitthal-gokhale.jpg",
+      "legacyCode": "A.2.3",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "vitthal-dinkar-gokhale",
+      "name": "Late Vitthal Dinkar Gokhale",
+      "photo": "images/vitthal-dinkar-gokhale.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "shashikant-vitthal-gokhale",
+      "name": "Late Shashikant (Shankar) Vitthal Gokhale",
+      "photo": "images/shashikant-vitthal-gokhale.jpg",
+      "legacyCode": "A.2.3.1",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "sumati-s-gokhale",
+      "name": "Late Sumati S Gokhale",
+      "photo": "images/sumati-s-gokhale.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "usha-s-gokhale",
+      "name": "Late Usha S Gokhale",
+      "photo": "images/usha-s-gokhale.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "ashwini-unmesh-joshi",
+      "name": "Ashwini Unmesh Joshi",
+      "photo": "images/ashwini-unmesh-joshi.jpg",
+      "legacyCode": "A.2.3.5.2",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "unmesh-joshi",
+      "name": "Unmesh Joshi",
+      "photo": "images/unmesh-joshi.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "rujuta-u-joshi",
+      "name": "Rujuta U Joshi",
+      "photo": "images/rujuta-u-joshi.jpg",
+      "legacyCode": "A.2.3.5.2.1",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "advait-u-joshi",
+      "name": "Advait U Joshi",
+      "photo": "images/advait-u-joshi.jpg",
+      "legacyCode": "A.2.3.5.2.2",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "ravindra-r-deodhar",
+      "name": "Late Ravindra R Deodhar",
+      "photo": "images/ravindra-r-deodhar.jpg",
+      "legacyCode": "A.2.4.6",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "nita-r-deodhar",
+      "name": "Nita R Deodhar",
+      "photo": "images/nita-r-deodhar.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "santosh-r-deodhar",
+      "name": "Santosh R Deodhar",
+      "photo": "images/santosh-r-deodhar.jpg",
+      "legacyCode": "A.2.4.6.1",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "akshata-s-deodhar",
+      "name": "Akshata S Deodhar",
+      "photo": "images/akshata-s-deodhar.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "sudhanva-santosh-deodhar",
+      "name": "Sudhanva Santosh Deodhar",
+      "photo": "images/sudhanva-santosh-deodhar.jpg",
+      "legacyCode": "A.2.4.6.1.1",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "sandesh-r-deodhar",
+      "name": "Sandesh R Deodhar",
+      "photo": "images/sandesh-r-deodhar.jpg",
+      "legacyCode": "A.2.4.6.2",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "shekhar-r-deodhar",
+      "name": "Shekhar R Deodhar",
+      "photo": "images/shekhar-r-deodhar.jpg",
+      "legacyCode": "A.2.4.7",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "sucheta-s-deodhar",
+      "name": "Late Sucheta S Deodhar",
+      "photo": "images/sucheta-s-deodhar.jpg",
+      "legacyCode": null,
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "shripad-s-deodhar",
+      "name": "Shripad S Deodhar",
+      "photo": "images/shripad-s-deodhar.jpg",
+      "legacyCode": "A.2.4.7.1",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    },
+    {
+      "id": "heramb-s-deodhar",
+      "name": "Heramb S Deodhar",
+      "photo": "images/heramb-s-deodhar.jpg",
+      "legacyCode": "A.2.4.7.2",
+      "phones": [],
+      "emails": [],
+      "birthDate": null,
+      "notes": ""
+    }
+  ],
+  "families": [
+    {
+      "id": "fam-vireshwar-root",
+      "label": "Root Family",
+      "legacyCode": null,
+      "adults": ["vireshwar-gokhale"],
+      "children": ["radhabai-govind-deodhar"],
+      "childFamilyIds": ["fam-radhabai-govind-deodhar"]
+    },
+    {
+      "id": "fam-radhabai-govind-deodhar",
+      "label": "Radhabai Govind Deodhar Household",
+      "legacyCode": "A.2",
+      "adults": ["radhabai-govind-deodhar", "govind-mahadev-deodhar"],
+      "children": ["sonutai-vitthal-gokhale"],
+      "childFamilyIds": ["fam-sonutai-vitthal-gokhale"]
+    },
+    {
+      "id": "fam-sonutai-vitthal-gokhale",
+      "label": "Sonutai Vitthal Gokhale Household",
+      "legacyCode": "A.2.3",
+      "adults": ["sonutai-vitthal-gokhale", "vitthal-dinkar-gokhale"],
+      "children": ["shashikant-vitthal-gokhale"],
+      "childFamilyIds": ["fam-shashikant-vitthal-gokhale"]
+    },
+    {
+      "id": "fam-shashikant-vitthal-gokhale",
+      "label": "Shashikant Vitthal Gokhale Household",
+      "legacyCode": "A.2.3.1",
+      "adults": ["shashikant-vitthal-gokhale", "sumati-s-gokhale", "usha-s-gokhale"],
+      "children": ["ashwini-unmesh-joshi"],
+      "childFamilyIds": ["fam-ashwini-unmesh-joshi"]
+    },
+    {
+      "id": "fam-ashwini-unmesh-joshi",
+      "label": "Ashwini and Unmesh Joshi Household",
+      "legacyCode": "A.2.3.5.2",
+      "adults": ["ashwini-unmesh-joshi", "unmesh-joshi"],
+      "children": ["rujuta-u-joshi", "advait-u-joshi"],
+      "childFamilyIds": []
+    },
+    {
+      "id": "fam-ravindra-r-deodhar",
+      "label": "Ravindra and Nita Deodhar Household",
+      "legacyCode": "A.2.4.6",
+      "adults": ["ravindra-r-deodhar", "nita-r-deodhar"],
+      "children": ["santosh-r-deodhar", "sandesh-r-deodhar", "shekhar-r-deodhar"],
+      "childFamilyIds": [
+        "fam-santosh-r-deodhar",
+        "fam-shekhar-r-deodhar"
+      ]
+    },
+    {
+      "id": "fam-santosh-r-deodhar",
+      "label": "Santosh and Akshata Deodhar Household",
+      "legacyCode": "A.2.4.6.1",
+      "adults": ["santosh-r-deodhar", "akshata-s-deodhar"],
+      "children": ["sudhanva-santosh-deodhar"],
+      "childFamilyIds": []
+    },
+    {
+      "id": "fam-shekhar-r-deodhar",
+      "label": "Shekhar and Sucheta Deodhar Household",
+      "legacyCode": "A.2.4.7",
+      "adults": ["shekhar-r-deodhar", "sucheta-s-deodhar"],
+      "children": ["shripad-s-deodhar", "heramb-s-deodhar"],
+      "childFamilyIds": []
+    }
+  ]
+}
