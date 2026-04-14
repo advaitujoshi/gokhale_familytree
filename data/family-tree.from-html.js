@@ -5504,9 +5504,7 @@ window.familyTreeData = {
         "sunita-a-deodhar"
       ],
       "childFamilyIds": [
-        "fam-avdhut-a-deodhar-anagha-a-deodhar",
-        "fam-ashwini-a-deodhar",
-        "fam-avanti-a-deodhar"
+        "fam-avdhut-a-deodhar-anagha-a-deodhar"
       ]
     },
     {
@@ -5518,13 +5516,16 @@ window.familyTreeData = {
         "avdhut-a-deodhar",
         "anagha-a-deodhar"
       ],
-      "childFamilyIds": []
+      "childFamilyIds": [
+        "fam-ashwini-a-deodhar",
+        "fam-avanti-a-deodhar"
+      ]
     },
     {
       "id": "fam-ashwini-a-deodhar",
       "label": "Ashwini A Deodhar",
       "sourceLabel": "Ashwini A Deodhar",
-      "generation": 5,
+      "generation": 6,
       "memberIds": [
         "ashwini-a-deodhar"
       ],
@@ -5534,7 +5535,7 @@ window.familyTreeData = {
       "id": "fam-avanti-a-deodhar",
       "label": "Avanti A Deodhar",
       "sourceLabel": "Avanti A Deodhar",
-      "generation": 5,
+      "generation": 6,
       "memberIds": [
         "avanti-a-deodhar"
       ],

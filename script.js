@@ -7,7 +7,7 @@ const searchStatus = document.getElementById("search-status");
 const memberModal = document.getElementById("member-modal");
 const memberModalClose = document.getElementById("member-modal-close");
 
-const DATA_PATH = "data/family-tree.from-html.json";
+
 
 let familyData = null;
 let rootUnit = null;
@@ -44,13 +44,7 @@ async function loadFamilyData() {
     return window.familyTreeData;
   }
 
-  const response = await fetch(DATA_PATH);
-
-  if (!response.ok) {
-    throw new Error(`Failed to load ${DATA_PATH}: ${response.status}`);
-  }
-
-  return response.json();
+  throw new Error("Family tree data (window.familyTreeData) is not loaded. Please ensure data/family-tree.from-html.js is included in index.html.");
 }
 
 function buildUnits(data) {
