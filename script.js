@@ -260,10 +260,10 @@ function getTreeLayoutMode() {
 
 function getBranchMeta(unit) {
   if (unit.children.length === 0) {
-    return "Leaf branch";
+    return "";
   }
 
-  return `${unit.children.length} child ${unit.children.length === 1 ? "branch" : "branches"}`;
+  return `${unit.children.length} ${unit.children.length === 1 ? "child" : "children"}`;
 }
 
 function createMemberButton(member) {
@@ -304,7 +304,7 @@ function renderDetails(member) {
           <div class="detail-badge-row">
             <span class="detail-badge">${familyData.meta.source.split("/").pop()}</span>
             ${unit.code ? `<span class="detail-badge">${unit.code}</span>` : ""}
-            <span class="detail-badge">${getBranchMeta(unit)}</span>
+            ${getBranchMeta(unit) ? `<span class="detail-badge">${getBranchMeta(unit)}</span>` : ""}
           </div>
         </div>
       </div>
@@ -466,10 +466,15 @@ function createTreeCard(unit) {
 
   unit.members.forEach((member) => {
     const button = createMemberButton(member);
-    const metaLine = document.createElement("span");
-    metaLine.className = "member-meta";
-    metaLine.innerHTML = `<span class="branch-label">${member.code || unit.code || getBranchMeta(unit)}</span>`;
-    button.querySelector("span").appendChild(metaLine);
+    const metaContent = member.code || unit.code || getBranchMeta(unit);
+    
+    if (metaContent) {
+      const metaLine = document.createElement("span");
+      metaLine.className = "member-meta";
+      metaLine.innerHTML = `<span class="branch-label">${metaContent}</span>`;
+      button.querySelector("span").appendChild(metaLine);
+    }
+    
     people.appendChild(button);
   });
 
