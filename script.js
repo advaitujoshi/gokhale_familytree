@@ -287,6 +287,49 @@ function createMemberButton(member) {
   return button;
 }
 
+function renderMiniTree(memberId) {
+  const entry = memberIndex.get(memberId);
+  if (!entry) return "";
+
+  const path = [];
+  // Add grandparents branch if exists
+  if (entry.ancestors.length >= 2) {
+    const gpUnit = unitsById.get(entry.ancestors[entry.ancestors.length - 2]);
+    if (gpUnit) path.push({ unit: gpUnit, isCurrent: false, label: "Grandparents' Branch" });
+  }
+  // Add parents branch if exists
+  if (entry.ancestors.length >= 1) {
+    const pUnit = unitsById.get(entry.ancestors[entry.ancestors.length - 1]);
+    if (pUnit) path.push({ unit: pUnit, isCurrent: false, label: "Parents' Branch" });
+  }
+  // Add current branch
+  path.push({ unit: entry.unit, isCurrent: true, label: "Current Branch" });
+
+  const stepsHtml = path.map((step, index) => `
+    <div class="ghat-step ${step.isCurrent ? "is-current" : ""}">
+      <div class="ghat-marker">
+        <div class="ghat-dot"></div>
+        <div class="ghat-line"></div>
+      </div>
+      <div class="ghat-content">
+        <span class="ghat-branch-name">${step.label}: ${step.unit.label}</span>
+        <span class="ghat-members">${step.unit.members.map(m => m.name).join(" & ")}</span>
+      </div>
+    </div>
+  `).join("");
+
+  return `
+    <div class="detail-line">
+       <dt>Lineage Path (Ghat Route)</dt>
+       <dd>
+         <div class="mini-ghat-tree">
+           ${stepsHtml}
+         </div>
+       </dd>
+    </div>
+  `;
+}
+
 function renderDetails(member) {
   const entry = memberIndex.get(member.id);
   const unit = entry.unit;
@@ -309,8 +352,7 @@ function renderDetails(member) {
         </div>
       </div>
       <div class="detail-grid">
-        ${createDetailRow("Branch Label", unit.label)}
-        ${createDetailRow("Original Source Label", unit.sourceLabel)}
+        ${renderMiniTree(member.id)}
         ${createDetailRow("Generation", `Generation ${unit.generation + 1}`)}
         ${createDetailRow("Photo File", member.photo)}
       </div>
@@ -466,17 +508,25 @@ function createTreeCard(unit) {
 
   unit.members.forEach((member) => {
     const button = createMemberButton(member);
-    const metaContent = member.code || unit.code || getBranchMeta(unit);
+    const memberMeta = member.code || unit.code;
     
-    if (metaContent) {
+    if (memberMeta) {
       const metaLine = document.createElement("span");
       metaLine.className = "member-meta";
-      metaLine.innerHTML = `<span class="branch-label">${metaContent}</span>`;
+      metaLine.innerHTML = `<span class="branch-label">${memberMeta}</span>`;
       button.querySelector("span").appendChild(metaLine);
     }
     
     people.appendChild(button);
   });
+
+  const branchMeta = getBranchMeta(unit);
+  if (branchMeta) {
+    const metaLine = document.createElement("div");
+    metaLine.className = "unit-meta";
+    metaLine.innerHTML = `<span class="branch-label">${branchMeta}</span>`;
+    people.appendChild(metaLine);
+  }
 
   card.appendChild(toggleButton);
   card.appendChild(people);

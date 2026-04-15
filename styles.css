@@ -487,6 +487,11 @@ body::before {
   color: var(--accent-deep);
 }
 
+.unit-meta {
+  margin-top: 4px;
+  padding-left: 58px; /* Align with names after the photo/initials */
+}
+
 .mobile-tree,
 .mobile-tree-children {
   list-style: none;
@@ -782,4 +787,90 @@ body::before {
     margin-left: 10px;
     padding-left: 12px;
   }
+}
+
+/* Mini Ghat Tree (Lineage Path) */
+.mini-ghat-tree {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ghat-step {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.ghat-step:last-child {
+  padding-bottom: 0;
+}
+
+.ghat-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.ghat-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface-strong);
+  box-shadow: 0 0 0 2px var(--line);
+  z-index: 2;
+}
+
+.ghat-step.is-current .ghat-dot {
+  background: var(--accent-deep);
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px rgba(157, 92, 47, 0.2);
+}
+
+.ghat-line {
+  position: absolute;
+  top: 12px;
+  bottom: -4px;
+  left: 11px;
+  width: 2px;
+  background: var(--line);
+  z-index: 1;
+}
+
+.ghat-step:last-child .ghat-line {
+  display: none;
+}
+
+.ghat-content {
+  flex: 1;
+  min-width: 0;
+  padding-top: -2px;
+}
+
+.ghat-branch-name {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.ghat-members {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.ghat-step.is-current .ghat-members {
+  font-weight: 700;
+  color: var(--accent-deep);
 }
