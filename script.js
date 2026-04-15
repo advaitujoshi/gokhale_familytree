@@ -330,6 +330,12 @@ function renderMiniTree(memberId) {
   `;
 }
 
+function getActivePathUnitIds() {
+  if (!selectedMemberId) return new Set();
+  const entry = memberIndex.get(selectedMemberId);
+  return new Set([...(entry ? entry.ancestors : []), (entry ? entry.unit.id : null)].filter(Boolean));
+}
+
 function renderDetails(member) {
   const entry = memberIndex.get(member.id);
   const unit = entry.unit;
@@ -493,13 +499,25 @@ function createTreeCard(unit) {
 
   if (hasChildren) {
     toggleButton.addEventListener("click", () => {
-      if (expandedUnitIds.has(unit.id)) {
-        expandedUnitIds.delete(unit.id);
-      } else {
+      const expanding = !expandedUnitIds.has(unit.id);
+      
+      if (expanding) {
         expandedUnitIds.add(unit.id);
+      } else {
+        expandedUnitIds.delete(unit.id);
       }
 
       renderTree();
+
+      if (expanding) {
+        // Auto-center the new branch so children are visible
+        setTimeout(() => {
+          const node = document.querySelector(`[data-unit-id="${unit.id}"]`);
+          if (node) {
+            node.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+          }
+        }, 100);
+      }
     });
   }
 
@@ -534,8 +552,10 @@ function createTreeCard(unit) {
 }
 
 function renderDesktopTreeNode(unit) {
+  const activePathIds = getActivePathUnitIds();
+  const isOnPath = activePathIds.has(unit.id);
   const node = document.createElement("li");
-  node.className = "hierarchy-node";
+  node.className = `hierarchy-node ${isOnPath ? "is-on-path" : ""}`;
   node.dataset.unitId = unit.id;
   node.appendChild(createTreeCard(unit));
 
@@ -549,8 +569,10 @@ function renderDesktopTreeNode(unit) {
 }
 
 function renderMobileTreeNode(unit) {
+  const activePathIds = getActivePathUnitIds();
+  const isOnPath = activePathIds.has(unit.id);
   const item = document.createElement("li");
-  item.className = "mobile-tree-item";
+  item.className = `mobile-tree-item ${isOnPath ? "is-on-path" : ""}`;
   item.dataset.unitId = unit.id;
   item.appendChild(createTreeCard(unit));
 

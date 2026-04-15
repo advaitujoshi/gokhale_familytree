@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Petemoss&display=swap');
 
 :root {
-  --bg-top: #fcfaf7;
-  --bg-bottom: #f2e9db;
-  --surface: rgba(255, 253, 250, 0.85);
-  --surface-strong: #ffffff;
-  --surface-muted: rgba(157, 92, 47, 0.06);
-  --line: rgba(157, 92, 47, 0.12);
-  --border: rgba(157, 92, 47, 0.1);
-  --text-main: #2d1d0e;
-  --text-soft: #6d5d4d;
-  --accent: #b96d3e;
-  --accent-deep: #82421d;
+  /* Permanent Vintage Theme */
+  --bg-top: #f4ece1;
+  --bg-bottom: #e8dcc4;
+  --surface: rgba(250, 243, 226, 0.9);
+  --surface-strong: #fffdf5;
+  --surface-muted: rgba(109, 76, 43, 0.08);
+  --line: rgba(109, 76, 43, 0.2);
+  --border: rgba(109, 76, 43, 0.15);
+  --text-main: #3e2e1e;
+  --text-soft: #7a6a5a;
+  --accent: #8b5a2b;
+  --accent-deep: #5d3a1a;
   --shadow-sm: 0 4px 20px rgba(45, 29, 14, 0.04);
   --shadow-md: 0 12px 40px rgba(45, 29, 14, 0.08);
   --shadow-lg: 0 30px 60px rgba(45, 29, 14, 0.14);
@@ -19,6 +20,9 @@
   --radius-md: 20px;
   --radius-sm: 14px;
   --glass: blur(16px);
+  --font-main: "Georgia", serif;
+  --font-title: "Playfair Display", serif;
+  --font-accent: "Petemoss", cursive;
 }
 
 * {
@@ -29,12 +33,24 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text-main);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(185, 109, 62, 0.1), transparent 35%),
-    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
-  background-attachment: fixed;
+  font-family: var(--font-main);
+  background: var(--bg-top);
+  overflow-x: hidden;
+}
+
+.living-bg {
+  position: fixed;
+  inset: -50%;
+  z-index: -1;
+  background: radial-gradient(circle at center, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  filter: blur(80px);
+  animation: bg-drift 40s infinite alternate ease-in-out;
+}
+
+@keyframes bg-drift {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(5%, 2%) rotate(2deg) scale(1.05); }
+  100% { transform: translate(-3%, -4%) rotate(-1deg) scale(0.98); }
 }
 
 body::before {
@@ -130,8 +146,9 @@ body::before {
 .hero h1,
 .details-card h2 {
   margin: 0;
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-style: italic;
   letter-spacing: -0.01em;
 }
 
@@ -461,9 +478,9 @@ body::before {
 }
 
 .member-full-name {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-title);
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-main);
   letter-spacing: -0.01em;
 }
@@ -788,6 +805,49 @@ body::before {
     padding-left: 12px;
   }
 }
+
+/* Blooming Animations */
+.hierarchy-node, .mobile-tree-item {
+  animation: bloom 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bloom {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Path Highlighting */
+.hierarchy-node.is-on-path > .member-card {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(185, 109, 62, 0.2), var(--shadow-lg);
+  outline: 2px solid var(--accent);
+}
+
+.hierarchy-node.is-on-path > ul::before,
+.hierarchy-node.is-on-path::before,
+.hierarchy-node.is-on-path::after {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  width: 3px;
+  z-index: 2;
+}
+
+.mobile-tree-item.is-on-path > .member-card {
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(185, 109, 62, 0.15);
+}
+
+.mobile-tree-item.is-on-path > .mobile-tree-children {
+  border-color: var(--accent);
+}
+
+/* Theme Switch removed (Vintage is permanent) */
 
 /* Mini Ghat Tree (Lineage Path) */
 .mini-ghat-tree {
