@@ -165,6 +165,20 @@ function createDetailRow(label, value) {
   `;
 }
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    };
+
+    return entities[char];
+  });
+}
+
 function indexMembers(unit, ancestors = []) {
   unit.members.forEach((member) => {
     memberIndex.set(member.id, {
@@ -339,6 +353,11 @@ function getActivePathUnitIds() {
 function renderDetails(member) {
   const entry = memberIndex.get(member.id);
   const unit = entry.unit;
+  const contactRows = [
+    createDetailRow("Generation", `Generation ${unit.generation + 1}`),
+    createDetailRow("Photo File", escapeHtml(member.photo))
+  ].join("");
+
   detailsPanel.innerHTML = `
     <article class="details-card">
       <div class="detail-top">
@@ -359,8 +378,7 @@ function renderDetails(member) {
       </div>
       <div class="detail-grid">
         ${renderMiniTree(member.id)}
-        ${createDetailRow("Generation", `Generation ${unit.generation + 1}`)}
-        ${createDetailRow("Photo File", member.photo)}
+        ${contactRows}
       </div>
       <div class="detail-related">
         <h3>Branch Members</h3>
