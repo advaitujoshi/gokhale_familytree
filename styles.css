@@ -7,7 +7,7 @@
   --surface: rgba(250, 243, 226, 0.9);
   --surface-strong: #fffdf5;
   --surface-muted: rgba(109, 76, 43, 0.08);
-  --line: rgba(109, 76, 43, 0.2);
+  --line: rgba(109, 76, 43, 0.5);
   --border: rgba(109, 76, 43, 0.15);
   --text-main: #3e2e1e;
   --text-soft: #7a6a5a;
@@ -304,10 +304,10 @@ body::before {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 2px;
+  width: 3px;
   height: 22px;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, var(--line), rgba(92, 66, 36, 0.08));
+  background: linear-gradient(180deg, var(--line), rgba(92, 66, 36, 0.15));
 }
 
 .hierarchy-node {
@@ -325,17 +325,17 @@ body::before {
   top: 0;
   width: 50%;
   height: 22px;
-  border-top: 1px solid var(--line);
+  border-top: 2px solid var(--line);
 }
 
 .hierarchy-node::before {
   right: 50%;
-  border-right: 1px solid var(--line);
+  border-right: 2px solid var(--line);
 }
 
 .hierarchy-node::after {
   left: 50%;
-  border-left: 1px solid var(--line);
+  border-left: 2px solid var(--line);
 }
 
 .hierarchy-node:only-child::before,
@@ -829,12 +829,15 @@ body::before {
   outline: 2px solid var(--accent);
 }
 
-.hierarchy-node.is-on-path > ul::before,
+.hierarchy-node.is-on-path > ul::before {
+  background: var(--accent) !important;
+  width: 3px;
+  z-index: 2;
+}
+
 .hierarchy-node.is-on-path::before,
 .hierarchy-node.is-on-path::after {
-  background: var(--accent) !important;
   border-color: var(--accent) !important;
-  width: 3px;
   z-index: 2;
 }
 

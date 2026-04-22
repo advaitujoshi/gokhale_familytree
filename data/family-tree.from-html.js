@@ -1128,7 +1128,7 @@ window.familyTreeData = {
     },
     {
       "id": "sanyukta-a-tamhankar",
-      "name": "Sanyukta A Tamhankar",
+      "name": "Sanyukta C Kulkarni",
       "photo": "images/sanyukta-a-tamhankar.jpg",
       "notes": ""
     },
@@ -1182,7 +1182,7 @@ window.familyTreeData = {
     },
     {
       "id": "priyanka-a-tamhankar",
-      "name": "Priyanka A Tamhankar",
+      "name": "Priyanka S Namapalli",
       "photo": "images/priyanka-a-tamhankar.jpg",
       "notes": ""
     },
@@ -3279,6 +3279,30 @@ window.familyTreeData = {
       "name": "Yashasvi A Tamhankar",
       "photo": "images/yashasvi-a-tamhankar.jpg",
       "notes": ""
+    },
+    {
+      "id": "yashwin-rupesh-gosavi",
+      "name": "Yashwin Rupesh Gosavi",
+      "photo": "images/placeholder.jpg",
+      "notes": ""
+    },
+    {
+      "id": "yashavi-ajinkya-tamhankar",
+      "name": "Yashavi Ajinkya Tamhankar",
+      "photo": "images/placeholder.jpg",
+      "notes": ""
+    },
+    {
+      "id": "arnav-ishan-bapat",
+      "name": "Arnav Ishan Bapat",
+      "photo": "images/placeholder.jpg",
+      "notes": ""
+    },
+    {
+      "id": "nimish-siddharth-kulkarni",
+      "name": "Nimish Siddharth Kulkarni",
+      "photo": "images/placeholder.jpg",
+      "notes": ""
     }
   ],
   "families": [
@@ -4729,11 +4753,12 @@ window.familyTreeData = {
     },
     {
       "id": "fam-sanyukta-a-tamhankar",
-      "label": "Sanyukta A Tamhankar",
-      "sourceLabel": "Sanyukta A Tamhankar",
+      "label": "Sanyukta C Kulkarni & Chaitanya Kulkarni",
+      "sourceLabel": "Sanyukta C Kulkarni & Chaitanya Kulkarni",
       "generation": 6,
       "memberIds": [
-        "sanyukta-a-tamhankar"
+        "sanyukta-a-tamhankar",
+        "chaitanya-kulkarni"
       ],
       "childFamilyIds": []
     },
@@ -4787,21 +4812,23 @@ window.familyTreeData = {
     },
     {
       "id": "fam-ajinkya-a-tamhankar",
-      "label": "Ajinkya A Tamhankar",
-      "sourceLabel": "Ajinkya A Tamhankar",
+      "label": "Ajinkya A Tamhankar & Yashavi A Tamhankar",
+      "sourceLabel": "Ajinkya A Tamhankar & Yashavi A Tamhankar",
       "generation": 6,
       "memberIds": [
-        "ajinkya-a-tamhankar"
+        "ajinkya-a-tamhankar",
+        "yashavi-ajinkya-tamhankar"
       ],
       "childFamilyIds": []
     },
     {
       "id": "fam-priyanka-a-tamhankar",
-      "label": "Priyanka A Tamhankar",
-      "sourceLabel": "Priyanka A Tamhankar",
+      "label": "Priyanka S Namapalli & Srikar Namapalli",
+      "sourceLabel": "Priyanka S Namapalli & Srikar Namapalli",
       "generation": 6,
       "memberIds": [
-        "priyanka-a-tamhankar"
+        "priyanka-a-tamhankar",
+        "srikar-namapalli"
       ],
       "childFamilyIds": []
     },
@@ -5434,6 +5461,18 @@ window.familyTreeData = {
         "pallavi-sidharth-kulkarni",
         "sidharth-kulkarni"
       ],
+      "childFamilyIds": [
+        "fam-nimish-siddharth-kulkarni"
+      ]
+    },
+    {
+      "id": "fam-nimish-siddharth-kulkarni",
+      "label": "Nimish Siddharth Kulkarni",
+      "sourceLabel": "Nimish Siddharth Kulkarni",
+      "generation": 7,
+      "memberIds": [
+        "nimish-siddharth-kulkarni"
+      ],
       "childFamilyIds": []
     },
     {
@@ -5444,6 +5483,18 @@ window.familyTreeData = {
       "memberIds": [
         "vallari-rupesh-gosavi",
         "rupesh-gosavi"
+      ],
+      "childFamilyIds": [
+        "fam-yashwin-rupesh-gosavi"
+      ]
+    },
+    {
+      "id": "fam-yashwin-rupesh-gosavi",
+      "label": "Yashwin Rupesh Gosavi",
+      "sourceLabel": "Yashwin Rupesh Gosavi",
+      "generation": 7,
+      "memberIds": [
+        "yashwin-rupesh-gosavi"
       ],
       "childFamilyIds": []
     },
@@ -5600,6 +5651,18 @@ window.familyTreeData = {
       "memberIds": [
         "sayali-ishan-bapat",
         "ishan-bapat"
+      ],
+      "childFamilyIds": [
+        "fam-arnav-ishan-bapat"
+      ]
+    },
+    {
+      "id": "fam-arnav-ishan-bapat",
+      "label": "Arnav Ishan Bapat",
+      "sourceLabel": "Arnav Ishan Bapat",
+      "generation": 7,
+      "memberIds": [
+        "arnav-ishan-bapat"
       ],
       "childFamilyIds": []
     },
