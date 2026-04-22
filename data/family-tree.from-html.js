@@ -7,7 +7,7 @@ window.familyTreeData = {
       "fam-vireshwar-gokhale"
     ],
     "familyCount": 276,
-    "personCount": 545
+    "personCount": 546
   },
   "people": [
     {
@@ -1700,6 +1700,12 @@ window.familyTreeData = {
       "id": "amit-amod-godbole",
       "name": "Amit Amod Godbole",
       "photo": "images/amit-amod-godbole.jpg",
+      "notes": ""
+    },
+    {
+      "id": "ketaki-godbole",
+      "name": "Ketaki Godbole",
+      "photo": "images/ketaki-godbole.jpg",
       "notes": ""
     },
     {
@@ -5508,16 +5514,17 @@ window.familyTreeData = {
         "amod-vishwas-godbole"
       ],
       "childFamilyIds": [
-        "fam-amit-amod-godbole"
+        "fam-amit-amod-godbole-ketaki-godbole"
       ]
     },
     {
-      "id": "fam-amit-amod-godbole",
-      "label": "Amit Amod Godbole",
-      "sourceLabel": "Amit Amod Godbole",
+      "id": "fam-amit-amod-godbole-ketaki-godbole",
+      "label": "Amit Amod Godbole & Ketaki Godbole",
+      "sourceLabel": "Amit Amod Godbole & Ketaki Godbole",
       "generation": 6,
       "memberIds": [
-        "amit-amod-godbole"
+        "amit-amod-godbole",
+        "ketaki-godbole"
       ],
       "childFamilyIds": []
     },
