@@ -3293,8 +3293,8 @@ window.familyTreeData = {
       "notes": ""
     },
     {
-      "id": "yashavi-ajinkya-tamhankar",
-      "name": "Yashavi Ajinkya Tamhankar",
+      "id": "yashasvi-ajinkya-tamhankar",
+      "name": "Yashasvi Ajinkya Tamhankar",
       "photo": "images/placeholder.jpg",
       "notes": ""
     },
@@ -4818,12 +4818,12 @@ window.familyTreeData = {
     },
     {
       "id": "fam-ajinkya-a-tamhankar",
-      "label": "Ajinkya A Tamhankar & Yashavi A Tamhankar",
-      "sourceLabel": "Ajinkya A Tamhankar & Yashavi A Tamhankar",
+      "label": "Ajinkya A Tamhankar & Yashasvi A Tamhankar",
+      "sourceLabel": "Ajinkya A Tamhankar & Yashasvi A Tamhankar",
       "generation": 6,
       "memberIds": [
         "ajinkya-a-tamhankar",
-        "yashavi-ajinkya-tamhankar"
+        "yashasvi-ajinkya-tamhankar"
       ],
       "childFamilyIds": []
     },
