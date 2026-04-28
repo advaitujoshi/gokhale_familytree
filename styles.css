@@ -214,7 +214,7 @@ body::before {
 
 .search-bar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr 1fr auto;
   gap: 12px;
   margin-bottom: 8px;
 }
@@ -254,6 +254,10 @@ body::before {
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   transition: all 200ms ease;
+}
+
+#back-to-tree {
+    background: linear-gradient(135deg, #5d7d5f, #37523a); /* Sage green for alternate action */
 }
 
 .search-bar button:hover {
@@ -792,12 +796,54 @@ body::before {
     padding: 12px;
   }
 
-  .mobile-tree {
-    gap: 12px;
-  }
+/* Search Results */
+.search-results-grid {
+    padding: 24px;
+    animation: fade-in 300ms ease;
+}
 
-  .mobile-tree-item {
+.search-results-title {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: var(--accent-deep);
+}
+
+.results-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    padding: 16px;
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform 200ms ease;
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.result-card .city-badge {
+    align-self: flex-start;
+    padding: 4px 12px;
+    background: var(--surface-muted);
+    color: var(--accent-deep);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
   }
 
   .mobile-tree-children {
@@ -854,17 +900,31 @@ body::before {
 
 /* Mini Ghat Tree (Lineage Path) */
 .mini-ghat-tree {
-  padding: 8px 0;
+  position: relative;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
+}
+
+.mini-ghat-tree::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 10px;
+  width: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .ghat-step {
   position: relative;
   display: flex;
-  gap: 16px;
-  padding-bottom: 20px;
+  gap: 18px;
+  padding-bottom: 30px;
+  align-items: flex-start;
+  z-index: 2;
 }
 
 .ghat-step:last-child {
@@ -872,68 +932,59 @@ body::before {
 }
 
 .ghat-marker {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
-  width: 24px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: #fdfaf5; /* Matches screenshot paper color */
 }
 
 .ghat-dot {
-  width: 12px;
-  height: 12px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--accent);
-  border: 2px solid var(--surface-strong);
-  box-shadow: 0 0 0 2px var(--line);
-  z-index: 2;
+}
+
+.ghat-step.is-current .ghat-marker {
+  background: var(--accent);
 }
 
 .ghat-step.is-current .ghat-dot {
-  background: var(--accent-deep);
-  transform: scale(1.2);
-  box-shadow: 0 0 0 3px rgba(157, 92, 47, 0.2);
-}
-
-.ghat-line {
-  position: absolute;
-  top: 12px;
-  bottom: -4px;
-  left: 11px;
-  width: 2px;
-  background: var(--line);
-  z-index: 1;
-}
-
-.ghat-step:last-child .ghat-line {
-  display: none;
+  background: var(--surface-strong);
+  width: 8px;
+  height: 8px;
 }
 
 .ghat-content {
-  flex: 1;
-  min-width: 0;
-  padding-top: -2px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1px;
 }
 
 .ghat-branch-name {
-  display: block;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 600;
-  margin-bottom: 2px;
+  letter-spacing: 0.05em;
+  color: #8b5a2b; 
+  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
 .ghat-members {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-main);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  color: #5a4a3a;
   line-height: 1.4;
+  font-style: regular;
 }
 
 .ghat-step.is-current .ghat-members {
   font-weight: 700;
-  color: var(--accent-deep);
+  color: #3e2e1e;
 }

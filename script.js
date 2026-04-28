@@ -2,8 +2,11 @@ const treeRoot = document.getElementById("tree-root");
 const detailsPanel = document.getElementById("details-panel");
 const searchForm = document.getElementById("member-search-form");
 const searchInput = document.getElementById("member-search-input");
+const cityInput = document.getElementById("city-search-input");
 const searchList = document.getElementById("member-search-list");
+const cityList = document.getElementById("city-search-list");
 const searchStatus = document.getElementById("search-status");
+const backToTreeBtn = document.getElementById("back-to-tree");
 const memberModal = document.getElementById("member-modal");
 const memberModalClose = document.getElementById("member-modal-close");
 
@@ -18,6 +21,7 @@ const memberIndex = new Map();
 const expandedUnitIds = new Set();
 let fitTreeFrame = 0;
 let activeTreeLayout = "";
+let isSearchView = false;
 
 function normalizeText(value) {
   return (value || "").trim().toLowerCase();
@@ -160,9 +164,13 @@ function createDetailRow(label, value) {
   return `
     <dl class="detail-line">
       <dt>${label}</dt>
-      <dd>${value}</dd>
+      <dd>${escapeHtml(value)}</dd>
     </dl>
   `;
+}
+
+function createCityRow(city) {
+  return createDetailRow("City", city);
 }
 
 function escapeHtml(value) {
@@ -194,12 +202,22 @@ function indexMembers(unit, ancestors = []) {
 }
 
 function populateSearchList() {
-  const options = Array.from(memberIndex.values())
+  const members = Array.from(memberIndex.values());
+  const names = members
     .map(({ member }) => member.name)
     .sort((a, b) => a.localeCompare(b));
 
-  searchList.innerHTML = options
+  searchList.innerHTML = names
     .map((name) => `<option value="${name}"></option>`)
+    .join("");
+
+  const cities = Array.from(new Set(members
+    .map(({ member }) => member.city)
+    .filter(Boolean)))
+    .sort((a, b) => a.localeCompare(b));
+
+  cityList.innerHTML = cities
+    .map((city) => `<option value="${city}"></option>`)
     .join("");
 }
 
@@ -306,24 +324,21 @@ function renderMiniTree(memberId) {
   if (!entry) return "";
 
   const path = [];
-  // Add grandparents branch if exists
+  
   if (entry.ancestors.length >= 2) {
     const gpUnit = unitsById.get(entry.ancestors[entry.ancestors.length - 2]);
     if (gpUnit) path.push({ unit: gpUnit, isCurrent: false, label: "Grandparents' Branch" });
   }
-  // Add parents branch if exists
   if (entry.ancestors.length >= 1) {
     const pUnit = unitsById.get(entry.ancestors[entry.ancestors.length - 1]);
     if (pUnit) path.push({ unit: pUnit, isCurrent: false, label: "Parents' Branch" });
   }
-  // Add current branch
   path.push({ unit: entry.unit, isCurrent: true, label: "Current Branch" });
 
   const stepsHtml = path.map((step, index) => `
     <div class="ghat-step ${step.isCurrent ? "is-current" : ""}">
       <div class="ghat-marker">
         <div class="ghat-dot"></div>
-        <div class="ghat-line"></div>
       </div>
       <div class="ghat-content">
         <span class="ghat-branch-name">${step.label}: ${step.unit.label}</span>
@@ -355,8 +370,9 @@ function renderDetails(member) {
   const unit = entry.unit;
   const contactRows = [
     createDetailRow("Generation", `Generation ${unit.generation + 1}`),
+    createCityRow(member.city),
     createDetailRow("Photo File", escapeHtml(member.photo))
-  ].join("");
+  ].filter(Boolean).join("");
 
   detailsPanel.innerHTML = `
     <article class="details-card">
@@ -413,7 +429,9 @@ function openMemberModal(memberId) {
   }
 
   selectedMemberId = memberId;
-  renderTree();
+  if (!isSearchView) {
+    renderTree();
+  }
   renderDetails(entry.member);
   memberModal.hidden = false;
 }
@@ -457,42 +475,94 @@ function expandPathToMember(memberId) {
   }
 }
 
-function findMemberByQuery(query) {
+function findMembersByQuery(query, cityQuery) {
   const normalizedQuery = normalizeText(query);
-
-  if (!normalizedQuery) {
-    return null;
-  }
+  const normalizedCityQuery = normalizeText(cityQuery);
 
   const members = Array.from(memberIndex.values()).map(({ member }) => member);
 
-  return (
-    members.find((member) => normalizeText(member.name) === normalizedQuery) ||
-    members.find((member) => normalizeText(member.name).includes(normalizedQuery)) ||
-    null
-  );
+  if (normalizedQuery) {
+    // If name is provided, we still prioritize it and find ALL matching names
+    const matched = members.filter((member) => normalizeText(member.name).includes(normalizedQuery));
+    return matched;
+  }
+
+  if (normalizedCityQuery) {
+    return members.filter((member) => member.city && normalizeText(member.city).includes(normalizedCityQuery));
+  }
+
+  return [];
+}
+
+function renderSearchResults(members) {
+  const container = document.createElement("div");
+  container.className = "search-results-grid";
+  
+  const title = document.createElement("h2");
+  title.className = "search-results-title";
+  title.textContent = `Found ${members.length} member${members.length === 1 ? '' : 's'}`;
+  container.appendChild(title);
+
+  const grid = document.createElement("div");
+  grid.className = "results-cards";
+  
+  members.forEach(member => {
+    const card = document.createElement("div");
+    card.className = "result-card";
+    
+    const button = createMemberButton(member);
+    card.appendChild(button);
+    
+    if (member.city) {
+        const cityBadge = document.createElement("span");
+        cityBadge.className = "city-badge";
+        cityBadge.textContent = member.city;
+        card.appendChild(cityBadge);
+    }
+    
+    grid.appendChild(card);
+  });
+  
+  container.appendChild(grid);
+  treeRoot.replaceChildren(container);
+  backToTreeBtn.hidden = false;
+  isSearchView = true;
 }
 
 function handleSearch(event) {
   event.preventDefault();
 
   const query = searchInput.value.trim();
+  const cityQuery = cityInput.value.trim();
 
-  if (!query) {
-    updateSearchStatus("Type a name to jump to that branch.");
+  if (!query && !cityQuery) {
+    updateSearchStatus("Type a name or city to jump to that branch.");
     return;
   }
 
-  const matchedMember = findMemberByQuery(query);
+  const matchedMembers = findMembersByQuery(query, cityQuery);
 
-  if (!matchedMember) {
-    updateSearchStatus(`No family member found for "${query}".`);
+  if (matchedMembers.length === 0) {
+    const errorMsg = query && cityQuery ? `No family member found for "${query}" in "${cityQuery}".` :
+                    query ? `No family member found for "${query}".` :
+                    `No family member found in city "${cityQuery}".`;
+    updateSearchStatus(errorMsg);
     return;
   }
 
-  expandPathToMember(matchedMember.id);
-  selectMember(matchedMember.id, { scroll: true, openModal: true });
-  updateSearchStatus(`Showing ${matchedMember.name}.`);
+  if (matchedMembers.length === 1 && query) {
+    // If it's a specific name search and only one match, jump to tree
+    const matchedMember = matchedMembers[0];
+    expandPathToMember(matchedMember.id);
+    selectMember(matchedMember.id, { scroll: true, openModal: true });
+    updateSearchStatus(`Showing ${matchedMember.name}${matchedMember.city ? ` from ${matchedMember.city}` : ''}.`);
+    backToTreeBtn.hidden = true;
+    isSearchView = false;
+  } else {
+    // If it's a city search or multiple name matches, show results grid
+    renderSearchResults(matchedMembers);
+    updateSearchStatus(`Found ${matchedMembers.length} result${matchedMembers.length === 1 ? '' : 's'}.`);
+  }
 }
 
 function createTreeCard(unit) {
@@ -655,6 +725,15 @@ function handleViewportChange() {
 
 function initEvents() {
   searchForm.addEventListener("submit", handleSearch);
+  
+  backToTreeBtn.addEventListener("click", () => {
+    isSearchView = false;
+    renderTree();
+    backToTreeBtn.hidden = true;
+    updateSearchStatus("Type a name or city to jump to that branch.");
+    searchInput.value = "";
+    cityInput.value = "";
+  });
 
   memberModalClose.addEventListener("click", closeMemberModal);
   memberModal.addEventListener("click", (event) => {

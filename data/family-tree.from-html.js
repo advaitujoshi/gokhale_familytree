@@ -1160,31 +1160,36 @@ window.familyTreeData = {
       "id": "vaishali-s-tamhankar",
       "name": "Vaishali S Tamhankar",
       "photo": "images/vaishali-s-tamhankar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "abhijit-s-tamhankar",
       "name": "Abhijit S Tamhankar",
       "photo": "images/abhijit-s-tamhankar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "geeta-a-tamhankar",
       "name": "Geeta A Tamhankar",
       "photo": "images/geeta-a-tamhankar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "ajinkya-a-tamhankar",
       "name": "Ajinkya A Tamhankar",
       "photo": "images/ajinkya-a-tamhankar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "priyanka-a-tamhankar",
       "name": "Priyanka S Namapalli",
       "photo": "images/priyanka-a-tamhankar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "late-prakash-narayan-tamhankar",
@@ -1580,13 +1585,15 @@ window.familyTreeData = {
       "id": "sunita-mohan-bhave",
       "name": "Sunita Mohan Bhave",
       "photo": "images/sunita-mohan-bhave.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Ratnagiri, Konkan"
     },
     {
       "id": "mohan-gajanan-bhave",
       "name": "Mohan Gajanan Bhave",
       "photo": "images/mohan-gajanan-bhave.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Ratnagiri, Konkan"
     },
     {
       "id": "late-hemangi-mohan-bhave",
@@ -1598,7 +1605,8 @@ window.familyTreeData = {
       "id": "akshay-mohan-bhave",
       "name": "Akshay Mohan Bhave",
       "photo": "images/akshay-mohan-bhave.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Ratnagiri, Konkan"
     },
     {
       "id": "late-jayant-shankar-gokhale",
@@ -1634,79 +1642,92 @@ window.familyTreeData = {
       "id": "asavari-sunanda-vivek-bhide",
       "name": "Asavari (Sunanda) Vivek Bhide",
       "photo": "images/asavari-sunanda-vivek-bhide.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sangli"
     },
     {
       "id": "vivek-bhide",
       "name": "Vivek Bhide",
       "photo": "images/vivek-bhide.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sangli"
     },
     {
       "id": "devendra-vivek-bhide",
       "name": "Devendra Vivek Bhide",
       "photo": "images/devendra-vivek-bhide.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sangli"
     },
     {
       "id": "padmaja-asha-shrikant-gokhale",
       "name": "Padmaja (Asha) Shrikant Gokhale",
       "photo": "images/padmaja-asha-shrikant-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Nagar"
     },
     {
       "id": "shrikant-dinkar-gokhale",
       "name": "Shrikant Dinkar Gokhale",
       "photo": "images/shrikant-dinkar-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Nagar"
     },
     {
       "id": "pallavi-sidharth-kulkarni",
       "name": "Pallavi Sidharth Kulkarni",
       "photo": "images/pallavi-sidharth-kulkarni.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Banglore"
     },
     {
       "id": "sidharth-kulkarni",
       "name": "Sidharth Kulkarni",
       "photo": "images/sidharth-kulkarni.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Banglore"
     },
     {
       "id": "vallari-rupesh-gosavi",
       "name": "Vallari Rupesh Gosavi",
       "photo": "images/vallari-rupesh-gosavi.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "rupesh-gosavi",
       "name": "Rupesh Gosavi",
       "photo": "images/rupesh-gosavi.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "pradnya-amod-godbole",
       "name": "Pradnya Amod Godbole",
       "photo": "images/pradnya-amod-godbole.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "amod-vishwas-godbole",
       "name": "Amod Vishwas Godbole",
       "photo": "images/amod-vishwas-godbole.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "amit-amod-godbole",
       "name": "Amit Amod Godbole",
       "photo": "images/amit-amod-godbole.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "ketaki-godbole",
       "name": "Ketaki Godbole",
       "photo": "images/ketaki-godbole.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "sarang-vasudev-ranade",
@@ -1742,19 +1763,22 @@ window.familyTreeData = {
       "id": "girish-dinkar-gokhale",
       "name": "Girish Dinkar Gokhale",
       "photo": "images/girish-dinkar-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Hubli"
     },
     {
       "id": "swati-girish-gokhale",
       "name": "Swati Girish Gokhale",
       "photo": "images/swati-girish-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Hubli"
     },
     {
       "id": "patanjali-abhijit-g-gokhale",
       "name": "Patanjali (Abhijit) G Gokhale",
       "photo": "images/patanjali-abhijit-g-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Hubli"
     },
     {
       "id": "sangita-shilpa-sunil-karmarkar",
@@ -1796,7 +1820,8 @@ window.familyTreeData = {
       "id": "shilpa-sachin-kelkar",
       "name": "Shilpa Sachin Kelkar",
       "photo": "images/shilpa-sachin-kelkar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sydney, Australia"
     },
     {
       "id": "late-sachin-s-kelkar",
@@ -1808,97 +1833,113 @@ window.familyTreeData = {
       "id": "sayali-ishan-bapat",
       "name": "Sayali Ishan Bapat",
       "photo": "images/sayali-ishan-bapat.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sydney, Australia"
     },
     {
       "id": "ishan-bapat",
       "name": "Ishan Bapat",
       "photo": "images/ishan-bapat.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sydney, Australia"
     },
     {
       "id": "mandar-sachin-kelkar",
       "name": "Mandar Sachin Kelkar",
       "photo": "images/mandar-sachin-kelkar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sydney, Australia"
     },
     {
       "id": "koustubh-v-gokhale",
       "name": "Koustubh V Gokhale",
       "photo": "images/koustubh-v-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Vashi, Mumbai"
     },
     {
       "id": "ketki-koustubh-gokhale",
       "name": "Ketki Koustubh Gokhale",
       "photo": "images/ketki-koustubh-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Vashi, Mumbai"
     },
     {
       "id": "mihir-k-gokhale",
       "name": "Mihir K Gokhale",
       "photo": "images/mihir-k-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Vashi, Mumbai"
     },
     {
       "id": "madan-vithal-gokhale",
       "name": "Madan Vithal Gokhale",
       "photo": "images/madan-vithal-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "mangal-madan-gokhale",
       "name": "Mangal Madan Gokhale",
       "photo": "images/mangal-madan-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "kedar-m-gokhale",
       "name": "Kedar M Gokhale",
       "photo": "images/kedar-m-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "jyoti-k-gokhale",
       "name": "Jyoti K Gokhale",
       "photo": "images/jyoti-k-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "pranav-k-gokhale",
       "name": "Pranav K Gokhale",
       "photo": "images/pranav-k-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "surabhi-k-gokhale",
       "name": "Surabhi K Gokhale",
       "photo": "images/surabhi-k-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "ashwini-unmesh-joshi",
       "name": "Ashwini Unmesh Joshi",
       "photo": "images/ashwini-unmesh-joshi.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "unmesh-joshi",
       "name": "Unmesh Joshi",
       "photo": "images/unmesh-joshi.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "rujuta-u-joshi",
       "name": "Rujuta U Joshi",
       "photo": "images/rujuta-u-joshi.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "advait-u-joshi",
       "name": "Advait U Joshi",
       "photo": "images/advait-u-joshi.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "late-krishna-vithal-gokhale",
@@ -1910,37 +1951,43 @@ window.familyTreeData = {
       "id": "vasanti-k-gokhale",
       "name": "Vasanti K Gokhale",
       "photo": "images/vasanti-k-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Thane, Mumbai"
     },
     {
       "id": "nilesh-k-gokhale",
       "name": "Nilesh K Gokhale",
       "photo": "images/nilesh-k-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Thane, Mumbai"
     },
     {
       "id": "asmita-n-gokhale",
       "name": "Asmita N Gokhale",
       "photo": "images/asmita-n-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Thane, Mumbai"
     },
     {
       "id": "chinmay-n-gokhale",
       "name": "Chinmay N Gokhale",
       "photo": "images/chinmay-n-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Thane, Mumbai"
     },
     {
       "id": "jui-n-gokhale",
       "name": "Jui N Gokhale",
       "photo": "images/jui-n-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Thane, Mumbai"
     },
     {
       "id": "vishvesh-k-gokhale",
       "name": "Vishvesh K Gokhale",
       "photo": "images/vishvesh-k-gokhale.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Thane, Mumbai"
     },
     {
       "id": "ramchandra-govind-deodhar",
@@ -2276,37 +2323,43 @@ window.familyTreeData = {
       "id": "arvind-r-deodhar",
       "name": "Arvind R Deodhar",
       "photo": "images/arvind-r-deodhar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "sunita-a-deodhar",
       "name": "Sunita A Deodhar",
       "photo": "images/sunita-a-deodhar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "avdhut-a-deodhar",
       "name": "Avdhut A Deodhar",
       "photo": "images/avdhut-a-deodhar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "anagha-a-deodhar",
       "name": "Anagha A Deodhar",
       "photo": "images/anagha-a-deodhar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "ashwini-a-deodhar",
       "name": "Ashwini A Deodhar",
       "photo": "images/ashwini-a-deodhar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "avanti-a-deodhar",
       "name": "Avanti A Deodhar",
       "photo": "images/avanti-a-deodhar.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "late-ravindra-r-deodhar",
@@ -3218,7 +3271,8 @@ window.familyTreeData = {
       "id": "srikar-namapalli",
       "name": "Srikar Namapalli",
       "photo": "images/srikar-namapalli.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "sudhanva-s-deodhar",
@@ -3290,25 +3344,29 @@ window.familyTreeData = {
       "id": "yashwin-rupesh-gosavi",
       "name": "Yashwin Rupesh Gosavi",
       "photo": "images/placeholder.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "yashasvi-ajinkya-tamhankar",
       "name": "Yashasvi Ajinkya Tamhankar",
       "photo": "images/placeholder.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Pune"
     },
     {
       "id": "arnav-ishan-bapat",
       "name": "Arnav Ishan Bapat",
       "photo": "images/placeholder.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Sydney, Australia"
     },
     {
       "id": "nimish-siddharth-kulkarni",
       "name": "Nimish Siddharth Kulkarni",
       "photo": "images/placeholder.jpg",
-      "notes": ""
+      "notes": "",
+      "city": "Banglore"
     }
   ],
   "families": [

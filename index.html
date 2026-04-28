@@ -30,9 +30,20 @@
               autocomplete="off"
             />
             <datalist id="member-search-list"></datalist>
+            
+            <input
+              id="city-search-input"
+              name="city-search"
+              type="search"
+              placeholder="Search by city..."
+              list="city-search-list"
+              autocomplete="off"
+            />
+            <datalist id="city-search-list"></datalist>
             <button type="submit">Find</button>
+            <button type="button" id="back-to-tree" hidden>Back to Tree</button>
           </form>
-          <p class="search-status" id="search-status">Type a name to jump to that branch.</p>
+          <p class="search-status" id="search-status">Type a name or city to jump to that branch.</p>
           <div id="tree-root" class="tree-root" aria-label="Family tree"></div>
         </section>
       </main>
