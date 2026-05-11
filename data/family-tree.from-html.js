@@ -1319,7 +1319,7 @@ window.familyTreeData = {
     },
     {
       "id": "ninish-godbole",
-      "name": "Ninish Godbole",
+      "name": "Nimish Godbole",
       "photo": "images/ninish-godbole.jpg",
       "notes": ""
     },
@@ -1427,7 +1427,7 @@ window.familyTreeData = {
     },
     {
       "id": "maya-durvesh-joshi",
-      "name": "Maya Durvesh Joshi",
+      "name": "Maya Durgesh Joshi",
       "photo": "images/maya-durvesh-joshi.jpg",
       "notes": ""
     },
@@ -2159,13 +2159,13 @@ window.familyTreeData = {
     },
     {
       "id": "sarojini-harihar-sahasrabudhe",
-      "name": "Sarojini Harihar Sahasrabudhe",
+      "name": "Late Sarojini Harihar Sahasrabudhe",
       "photo": "images/sarojini-harihar-sahasrabudhe.jpg",
       "notes": ""
     },
     {
       "id": "harihar-shamrao-sahasrabudhe",
-      "name": "Harihar Shamrao Sahasrabudhe",
+      "name": "Late Harihar Shamrao Sahasrabudhe",
       "photo": "images/harihar-shamrao-sahasrabudhe.jpg",
       "notes": ""
     },
@@ -3179,7 +3179,7 @@ window.familyTreeData = {
     },
     {
       "id": "sarojini-harihar-sahasrabuddhe",
-      "name": "Sarojini Harihar Sahasrabuddhe",
+      "name": "Late Sarojini Harihar Sahasrabuddhe",
       "photo": "images/sarojini-harihar-sahasrabuddhe.jpg",
       "notes": ""
     },
@@ -5068,8 +5068,8 @@ window.familyTreeData = {
     },
     {
       "id": "fam-ninish-godbole",
-      "label": "Ninish Godbole",
-      "sourceLabel": "Ninish Godbole",
+      "label": "Nimish Godbole",
+      "sourceLabel": "Nimish Godbole",
       "generation": 6,
       "memberIds": [
         "ninish-godbole"
@@ -5210,8 +5210,8 @@ window.familyTreeData = {
     },
     {
       "id": "fam-maya-durvesh-joshi-late-durvesh-joshi",
-      "label": "Maya Durvesh Joshi & Late Durvesh Joshi",
-      "sourceLabel": "Maya Durvesh Joshi & Late Durvesh Joshi",
+      "label": "Maya Durgesh Joshi & Late Durvesh Joshi",
+      "sourceLabel": "Maya Durgesh Joshi & Late Durvesh Joshi",
       "generation": 5,
       "memberIds": [
         "maya-durvesh-joshi",
@@ -6136,8 +6136,8 @@ window.familyTreeData = {
     },
     {
       "id": "fam-sarojini-harihar-sahasrabudhe-harihar-shamrao-sahasrabudhe",
-      "label": "Sarojini Harihar Sahasrabudhe & Harihar Shamrao Sahasrabudhe",
-      "sourceLabel": "Sarojini Harihar Sahasrabudhe & Harihar Shamrao Sahasrabudhe",
+      "label": "Late Sarojini Harihar Sahasrabudhe & Late Harihar Shamrao Sahasrabudhe",
+      "sourceLabel": "Late Sarojini Harihar Sahasrabudhe & Late Harihar Shamrao Sahasrabudhe",
       "generation": 4,
       "memberIds": [
         "sarojini-harihar-sahasrabudhe",
