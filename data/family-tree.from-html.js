@@ -6,8 +6,8 @@ window.familyTreeData = {
     "rootFamilyIds": [
       "fam-vireshwar-gokhale"
     ],
-    "familyCount": 276,
-    "personCount": 546
+    "familyCount": 277,
+    "personCount": 547
   },
   "people": [
     {
@@ -3028,6 +3028,12 @@ window.familyTreeData = {
       "notes": ""
     },
     {
+      "id": "nived-shashank-phadke",
+      "name": "Nived Shashank Phadke",
+      "photo": "images/placeholder.jpg",
+      "notes": ""
+    },
+    {
       "id": "nihira-a-joshi",
       "name": "Nihira A Joshi",
       "photo": "images/nihira-a-joshi.jpg",
@@ -5954,11 +5960,24 @@ window.familyTreeData = {
     },
     {
       "id": "fam-shashank-s-phadke",
-      "label": "Shashank S Phadke",
-      "sourceLabel": "Shashank S Phadke",
+      "label": "Shashank S Phadke & Shreya Shashank Phadke",
+      "sourceLabel": "Shashank S Phadke & Shreya Shashank Phadke",
       "generation": 6,
       "memberIds": [
-        "shashank-s-phadke"
+        "shashank-s-phadke",
+        "shreya-shashank-phadke"
+      ],
+      "childFamilyIds": [
+        "fam-nived-shashank-phadke"
+      ]
+    },
+    {
+      "id": "fam-nived-shashank-phadke",
+      "label": "Nived Shashank Phadke",
+      "sourceLabel": "Nived Shashank Phadke",
+      "generation": 7,
+      "memberIds": [
+        "nived-shashank-phadke"
       ],
       "childFamilyIds": []
     },
